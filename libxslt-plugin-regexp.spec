@@ -1,11 +1,11 @@
 Summary:	A libxslt plugin providing regexp extension functions
 Name:		libxslt-plugin-regexp
-Version:	0.3
-Release:	0.2
+Version:	0.5
+Release:	0.1
 License:	MIT
 Group:		Development/Libraries
-Source0:	ftp://xmlsoft.org/libxml2/plugins/%{name}-%{version}.tar.gz
-# Source0-md5:	7e394d4b6cb1d51d91e14d3fbac78cb7
+Source0:	http://home.comcast.net/~joelwreed/libxslt-plugin-regexp-0.5.tar.gz
+# Source0-md5:	f9e536ad72f2866e726b45770caaf474
 BuildRequires:	libxslt-devel >= 1.1.13
 BuildRequires:	pcre-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
