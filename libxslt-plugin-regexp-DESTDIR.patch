@@ -1,0 +1,17 @@
+--- libxslt-plugin-regexp-0.5/Makefile.am~	2005-07-15 06:22:11.000000000 +0300
++++ libxslt-plugin-regexp-0.5/Makefile.am	2008-01-24 20:13:26.109577146 +0200
+@@ -15,7 +15,7 @@
+ 	xsltproc test.xsl test.xml > test.out
+ 
+ check: 
+-	@if test ! -f $(pkglibdir)/$(pkglib_LTLIBRARIES); then \
++	@if test ! -f $(DESTDIR)$(pkglibdir)/$(pkglib_LTLIBRARIES); then \
+   echo "You must install the plugin before running make check!"; \
+ 	exit 1; \
+ 	fi
+@@ -25,4 +25,4 @@
+ 
+ install-exec-hook:
+ # what's the right way to exclude .la files from installation? not sure...	
+-	@rm $(pkglibdir)/$(pkglib_LTLIBRARIES)
++	@rm $(DESTDIR)$(pkglibdir)/$(pkglib_LTLIBRARIES)
