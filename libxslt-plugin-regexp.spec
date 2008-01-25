@@ -11,6 +11,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libxslt-devel >= 1.1.13
 BuildRequires:	pcre-devel
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		plugindir	%(xslt-config --plugins 2>/dev/null)
@@ -25,6 +26,8 @@ These functions are documented at <http://www.exslt.org/regexp/>.
 %prep
 %setup -q
 %patch0 -p1
+
+%{__sed} -i -e 's,\r$,,' *.xml *.xsl
 
 %build
 %{__aclocal}
@@ -44,4 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.xsl *.xml
 %attr(755,root,root) %{plugindir}/exslt_org_regular_expressions.so
