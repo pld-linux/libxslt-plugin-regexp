@@ -1,9 +1,10 @@
 Summary:	A libxslt plugin providing regexp extension functions
+Summary(pl.UTF-8):	Wtyczka libxslt udostępniająca funkcje wyrażeń regularnych
 Name:		libxslt-plugin-regexp
 Version:	0.5
 Release:	0.1
 License:	MIT
-Group:		Development/Libraries
+Group:		Libraries
 Source0:	http://home.comcast.net/~joelwreed/%{name}-%{version}.tar.gz
 # Source0-md5:	f9e536ad72f2866e726b45770caaf474
 Patch0:		%{name}-DESTDIR.patch
@@ -19,9 +20,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A libxslt plugin providing the extension functions regexp:test,
 regexp.match, and regexp:replace. This plugin uses PCRE
-<http://www.pcre.org>.
+<http://www.pcre.org/>.
 
 These functions are documented at <http://www.exslt.org/regexp/>.
+
+%description -l pl.UTF-8
+Wtyczka libxslt udostępniająca funkcje rozszerzające regexp:test,
+regexp.match i regexp.replace. Wykorzystuje PCRE
+<http://www.pcre.org/>.
+
+Funkcje są opisane pod adresem <http://www.exslt.org/regexp/>.
 
 %prep
 %setup -q
