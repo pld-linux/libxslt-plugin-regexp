@@ -33,7 +33,7 @@ Funkcje są opisane pod adresem <http://www.exslt.org/regexp/>.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %{__sed} -i -e 's,\r$,,' *.xml *.xsl
 
